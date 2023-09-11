@@ -1,4 +1,5 @@
 -- Databricks notebook source
+-- Here you can find the SQL code to visualize the Clean dataset. Visualizations can also be found in the ReadMe file.
 -- Glucose effect on Stroke probability
 select
   round(avg_glucose_level / 20, 0) * 20 as glucose,

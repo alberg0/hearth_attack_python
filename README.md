@@ -1,2 +1,8 @@
 # Repository Description 
 This repository analyzes a dataset containing information from 5000 individuals, aiming to uncover factors influencing the likelihood of a heart attack. It employs data exploration, transformation, and modeling techniques to identify significant features and visualize key insights from the research.
+
+## Notes
+- BMI Imputation has been chosen over data dropping as too many observation presenting a positive target value were involved. A Gaussian random distribution has been chosen to impute the values. This process can be methodologically improved by verifying that the sample is compatible with a Gaussian distribution (e.g. [Shapiro-Wilk test]([url](https://en.wikipedia.org/wiki/Normality_test#:~:text=A%20normality%20test%20is%20used,a%20normally%20distributed%20sample%20population.)https://en.wikipedia.org/wiki/Normality_test#:~:text=A%20normality%20test%20is%20used,a%20normally%20distributed%20sample%20population.))
+- Smoking Level has been imputed with a [K-Nearest Neighbors imputer]([url](https://medium.com/@kyawsawhtoon/a-guide-to-knn-imputation-95e2dc496e)https://medium.com/@kyawsawhtoon/a-guide-to-knn-imputation-95e2dc496e). This algorithm allows for imputing qualitative values by looking at similar observations.
+- When examining the model's statistics, it becomes evident that logistic regression does not fit the data well.
+- The Decision Tree has been adopted due to its interpretability. In this kind of analysis, feature importance can be preferable to a perfect model fit. One future improvement will be to implement model diagnostic, to quantify the model's fit to the data. 
